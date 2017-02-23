@@ -114,6 +114,11 @@ namespace Intel.DonutMaster.MockServices
 
         public void Add(Product product)
         {
+
+            var productId = _Products.Max(p => p.ProductId);
+
+            product.ProductId = ++productId;
+
             _Products.Add(product);
         }
 
