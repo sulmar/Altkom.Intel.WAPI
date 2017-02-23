@@ -13,6 +13,8 @@ namespace Intel.DonutMaster.Interfaces
 
         Product Get(int id);
 
+        Product Get(string symbol);
+
         void Add(Product product);
 
         void Update(Product product);

@@ -12,6 +12,8 @@ namespace Intel.DonutMaster.Models
 
         public string Name { get; set; }
 
+        public string Symbol { get; set; }
+
         public bool IsGlutenFree { get; set; }
 
         public int Calories { get; set; }

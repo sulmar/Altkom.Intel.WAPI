@@ -17,6 +17,7 @@ namespace Intel.DonutMaster.MockServices
             {
                 ProductId = 1,
                 Name = "Pączek",
+                Symbol = "P001",
                 Calories = 300,
                 IsGlutenFree = false,
                 Recipe = new Recipe
@@ -65,6 +66,7 @@ namespace Intel.DonutMaster.MockServices
             {
                 ProductId = 2,
                 Name = "Faworki",
+                Symbol = "F099",
                 Calories = 300,
                 IsGlutenFree = false,
                 Recipe = new Recipe
@@ -126,6 +128,8 @@ namespace Intel.DonutMaster.MockServices
         {
             return _Products;
         }
+
+        public Product Get(string symbol) => _Products.SingleOrDefault(p => p.Symbol == symbol);
 
         public Product Get(int id)
         {

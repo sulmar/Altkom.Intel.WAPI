@@ -22,11 +22,14 @@ namespace Intel.DonutMaster.Service.Controllers
             return Ok(products);
         }
 
-        public IHttpActionResult Get(int id)
-        {
-            var product = _ProductsService.Get(id);
 
-            if (product==null)
+
+        [Route("api/products/{symbol}")]
+        public IHttpActionResult Get(string symbol)
+        {
+            var product = _ProductsService.Get(symbol);
+
+            if (product == null)
             {
                 return NotFound();
             }
@@ -34,7 +37,20 @@ namespace Intel.DonutMaster.Service.Controllers
             return Ok(product);
         }
 
+        [Route("api/products/{id:int}")]
+        public IHttpActionResult Get(int id)
+        {
+            var product = _ProductsService.Get(id);
 
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
+        }
+
+       
         public IHttpActionResult Post(Product product)
         {
             _ProductsService.Add(product);
