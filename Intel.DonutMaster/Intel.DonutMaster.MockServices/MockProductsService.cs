@@ -63,13 +63,13 @@ namespace Intel.DonutMaster.MockServices
 
             new Product
             {
-                ProductId = 1,
+                ProductId = 2,
                 Name = "Faworki",
                 Calories = 300,
                 IsGlutenFree = false,
                 Recipe = new Recipe
                 {
-                    RecipeId = 1,
+                    RecipeId = 2,
                     Name = "Przepis na pączek 2",
                     RecipeSteps = new List<RecipeStep>
                     {

@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.Models", "Intel.DonutMaster.Models\Intel.DonutMaster.Models.csproj", "{9CB8434F-C9BB-42B4-93C0-A3C9BE24042D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.Interfaces", "Intel.DonutMaster.Interfaces\Intel.DonutMaster.Interfaces.csproj", "{158217F4-9A6C-4488-BA0E-931A73002921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.MockServices", "Intel.DonutMaster.MockServices\Intel.DonutMaster.MockServices.csproj", "{3926705B-9BCC-497C-92BC-4E2DF8598785}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9CB8434F-C9BB-42B4-93C0-A3C9BE24042D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CB8434F-C9BB-42B4-93C0-A3C9BE24042D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CB8434F-C9BB-42B4-93C0-A3C9BE24042D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158217F4-9A6C-4488-BA0E-931A73002921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158217F4-9A6C-4488-BA0E-931A73002921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158217F4-9A6C-4488-BA0E-931A73002921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158217F4-9A6C-4488-BA0E-931A73002921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
