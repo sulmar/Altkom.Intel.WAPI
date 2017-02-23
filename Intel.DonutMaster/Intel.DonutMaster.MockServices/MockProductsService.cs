@@ -11,7 +11,7 @@ namespace Intel.DonutMaster.MockServices
     public class MockProductsService : IProductsService
     {
 
-        private IList<Product> _Products = new List<Product>
+        private static IList<Product> _Products = new List<Product>
         {
             new Product
             {
@@ -112,24 +112,36 @@ namespace Intel.DonutMaster.MockServices
 
         };
 
+        public void Add(Product product)
+        {
+            _Products.Add(product);
+        }
+
         public IList<Product> Get()
         {
-            throw new NotImplementedException();
+            return _Products;
         }
 
         public Product Get(int id)
         {
-            throw new NotImplementedException();
+            var product = _Products.SingleOrDefault(p => p.ProductId == id);
+
+            return product;
         }
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var product = Get(id);
+
+            _Products.Remove(product);
         }
 
         public void Update(Product product)
         {
-            throw new NotImplementedException();
+            Remove(product.ProductId);
+
+            Add(product);
+
         }
     }
 }

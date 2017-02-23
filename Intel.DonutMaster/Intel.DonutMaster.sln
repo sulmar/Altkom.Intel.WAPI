@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.Interface
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.MockServices", "Intel.DonutMaster.MockServices\Intel.DonutMaster.MockServices.csproj", "{3926705B-9BCC-497C-92BC-4E2DF8598785}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.Service", "Intel.DonutMaster.Service\Intel.DonutMaster.Service.csproj", "{6D8E1356-06C5-42FF-90C9-ACD74A99C2A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3926705B-9BCC-497C-92BC-4E2DF8598785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8E1356-06C5-42FF-90C9-ACD74A99C2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8E1356-06C5-42FF-90C9-ACD74A99C2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8E1356-06C5-42FF-90C9-ACD74A99C2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8E1356-06C5-42FF-90C9-ACD74A99C2A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
