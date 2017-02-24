@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Topshelf;
 
 namespace Intel.DonutMaster.MicroService
 {
@@ -16,14 +17,27 @@ namespace Intel.DonutMaster.MicroService
 
             // TODO
 
-            string address = "http://localhost:5010";
-
-            using (var webapp = WebApp.Start<Startup>(address))
+            HostFactory.Run(config =>
             {
-                Console.WriteLine("Press any key to exit.");
+                config.Service<IService>(sc =>
+                {
+                    sc.ConstructUsing(() => new Service());
 
-                Console.ReadKey();
-            }
+                    sc.WhenStarted(s => s.Start());
+
+                    sc.WhenStopped(s => s.Stop());
+                });
+
+
+                config.RunAsLocalSystem();
+
+                config.SetServiceName("DonutMaster");
+                config.SetDescription("Donut Master Micro Service");
+
+                config.StartAutomatically();
+
+
+            });
 
         }
     }
