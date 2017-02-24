@@ -126,16 +126,52 @@ namespace Intel.DonutMaster.MockServices
 
         public IList<Product> Get()
         {
-            return _Products;
+            var products = _Products.Select(p => new Product
+            {
+                Name = p.Name,
+                Symbol = p.Symbol,
+                Calories = p.Calories,
+                IsGlutenFree = p.IsGlutenFree,
+                ProductId = p.ProductId
+            }).ToList();
+
+            return products;
         }
 
         public Product Get(string symbol) => _Products.SingleOrDefault(p => p.Symbol == symbol);
 
         public Product Get(int id)
         {
-            var product = _Products.SingleOrDefault(p => p.ProductId == id);
+            var products = Get();
+
+            var product = products.SingleOrDefault(p => p.ProductId == id);
 
             return product;
+        }
+
+        public Task<IList<Product>> GetAsync()
+        {
+            return Task.Run(() => Get());
+        }
+
+        public Recipe GetByProduct(int productId)
+        {
+            var recipe = _Products
+                    .SingleOrDefault(p => p.ProductId == productId)
+                    ?.Recipe;
+
+            var result = new Recipe { RecipeId = recipe.RecipeId, Name = recipe.Name };
+
+            return result;
+        }
+
+        public IList<RecipeStep> GetRecipeSteps(int productId)
+        {
+            var recipeSteps = _Products
+                    .SingleOrDefault(p => p.ProductId == productId)
+                    ?.Recipe.RecipeSteps;
+
+            return recipeSteps;
         }
 
         public void Remove(int id)

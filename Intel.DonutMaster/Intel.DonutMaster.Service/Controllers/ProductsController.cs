@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 
@@ -15,9 +16,9 @@ namespace Intel.DonutMaster.Service.Controllers
 
         private IProductsService _ProductsService = new MockProductsService();
 
-        public IHttpActionResult Get()
+        public async Task<IHttpActionResult> Get()
         {
-            var products = _ProductsService.Get();
+            var products = await _ProductsService.GetAsync();
 
             return Ok(products);
         }
@@ -97,6 +98,24 @@ namespace Intel.DonutMaster.Service.Controllers
         public void Head()
         {
             throw new NotImplementedException();
+        }
+
+
+        [Route("api/Products/{productId}/recipe")]
+        public IHttpActionResult GetRecipeByProduct(int productId)
+        {
+            var recipe = _ProductsService.GetByProduct(productId);
+
+            return Ok(recipe);
+        }
+
+
+        [Route("api/Products/{productId}/recipe/steps")]
+        public IHttpActionResult GetRecipeSteps(int productId)
+        {
+            var steps = _ProductsService.GetRecipeSteps(productId);
+
+            return Ok(steps);
         }
     }
 }

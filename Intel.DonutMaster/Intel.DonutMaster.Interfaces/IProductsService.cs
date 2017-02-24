@@ -20,5 +20,14 @@ namespace Intel.DonutMaster.Interfaces
         void Update(Product product);
 
         void Remove(int id);
+
+
+        Task<IList<Product>> GetAsync();
+
+
+        Recipe GetByProduct(int productId);
+
+        IList<RecipeStep> GetRecipeSteps(int productId);
+
     }
 }
