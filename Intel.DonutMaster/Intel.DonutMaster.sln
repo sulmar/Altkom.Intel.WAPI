@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.Service",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.MicroService", "Intel.DonutMaster.MicroService\Intel.DonutMaster.MicroService.csproj", "{7FEAE806-1A4F-43B5-857E-820994CA9AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.ConsoleClient", "Intel.DonutMaster.ConsoleClient\Intel.DonutMaster.ConsoleClient.csproj", "{37BCFE04-76E9-43AE-BAE4-ED114C7A1F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.DonutMaster.RestApiServices", "Intel.DonutMaster.RestApiServices\Intel.DonutMaster.RestApiServices.csproj", "{E37A7168-C3AC-4E7A-9419-598254DDE2BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{7FEAE806-1A4F-43B5-857E-820994CA9AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FEAE806-1A4F-43B5-857E-820994CA9AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FEAE806-1A4F-43B5-857E-820994CA9AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BCFE04-76E9-43AE-BAE4-ED114C7A1F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BCFE04-76E9-43AE-BAE4-ED114C7A1F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BCFE04-76E9-43AE-BAE4-ED114C7A1F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BCFE04-76E9-43AE-BAE4-ED114C7A1F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37A7168-C3AC-4E7A-9419-598254DDE2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37A7168-C3AC-4E7A-9419-598254DDE2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37A7168-C3AC-4E7A-9419-598254DDE2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37A7168-C3AC-4E7A-9419-598254DDE2BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
