@@ -14,7 +14,17 @@ namespace Intel.DonutMaster.Service.Controllers
     public class ProductsController : ApiController
     {
 
-        private IProductsService _ProductsService = new MockProductsService();
+        private IProductsService _ProductsService;
+
+        public ProductsController()
+            : this(new MockProductsService())
+        { }
+
+        public ProductsController(IProductsService productsService)
+        {
+            this._ProductsService = productsService;
+        }
+
 
         public async Task<IHttpActionResult> Get()
         {
