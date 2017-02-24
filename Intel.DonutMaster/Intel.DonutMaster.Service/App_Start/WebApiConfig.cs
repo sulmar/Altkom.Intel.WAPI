@@ -1,4 +1,5 @@
-﻿using Intel.DonutMaster.Service.Formatters;
+﻿using Intel.DonutMaster.Service.Filters;
+using Intel.DonutMaster.Service.Formatters;
 using Intel.DonutMaster.Service.Handlers;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,9 @@ namespace Intel.DonutMaster.Service
 
 
             config.Formatters.Add(new QrCodeFormatter());
+
+
+            config.Filters.Add(new ExecutionTimeFilter());
         }
     }
 }
