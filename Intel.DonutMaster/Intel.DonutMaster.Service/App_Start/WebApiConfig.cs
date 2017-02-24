@@ -1,4 +1,5 @@
-﻿using Intel.DonutMaster.Service.Handlers;
+﻿using Intel.DonutMaster.Service.Formatters;
+using Intel.DonutMaster.Service.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,9 @@ namespace Intel.DonutMaster.Service
 
             config.MessageHandlers.Add(new TraceMessageHandler());
             config.MessageHandlers.Add(new SecretKeyHandler());
+
+
+            config.Formatters.Add(new QrCodeFormatter());
         }
     }
 }
