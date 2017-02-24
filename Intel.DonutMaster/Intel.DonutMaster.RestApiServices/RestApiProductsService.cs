@@ -38,9 +38,11 @@ namespace Intel.DonutMaster.RestApiServices
                 client.BaseAddress = new Uri("http://localhost:52765");
                 client.DefaultRequestHeaders.Add("Secret-Key", "12345");
 
-                var response = await client.GetStringAsync("api/Products");
+                var response = await client.GetAsync("api/Products");
 
-                throw new NotImplementedException();
+                var products = await response.Content.ReadAsAsync<IList<Product>>();
+
+                return products;
             }
         }
 
