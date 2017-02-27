@@ -8,5 +8,6 @@ namespace Intel.DonutMaster.Models
 {
     public abstract class Base
     {
+        public int Id { get; set; }
     }
 }

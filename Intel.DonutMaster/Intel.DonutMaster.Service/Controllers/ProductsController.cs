@@ -11,27 +11,14 @@ using System.Web.Http;
 
 namespace Intel.DonutMaster.Service.Controllers
 {
-    public class ProductsController : ApiController
+    public class ProductsController : BaseApiController<Product, IProductsService, int>
     {
 
         private IProductsService _ProductsService;
 
         public ProductsController()
-            : this(new MockProductsService())
+            : base(new MockProductsService())
         { }
-
-        public ProductsController(IProductsService productsService)
-        {
-            this._ProductsService = productsService;
-        }
-
-
-        public async Task<IHttpActionResult> Get()
-        {
-            var products = await _ProductsService.GetAsync();
-
-            return Ok(products);
-        }
 
 
 
@@ -48,62 +35,7 @@ namespace Intel.DonutMaster.Service.Controllers
             return Ok(product);
         }
 
-        [Route("api/products/{id:int}")]
-        public IHttpActionResult Get(int id)
-        {
-            var product = _ProductsService.Get(id);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(product);
-        }
-
-       
-        public IHttpActionResult Post(Product product)
-        {
-            _ProductsService.Add(product);
-
-            // return StatusCode(System.Net.HttpStatusCode.Created);
-
-            return CreatedAtRoute("DefaultApi", new { id = product.ProductId}, product);
-
-            // return Created($"http://localhost:52765/api/products/{product.ProductId}", product);
-        }
-
-        public IHttpActionResult Put(int id, Product product)
-        {
-            if (id != product.ProductId)
-            {
-                return BadRequest("Niezgodny identyfikator");
-            }
-
-            _ProductsService.Update(product);
-
-            return StatusCode(System.Net.HttpStatusCode.NoContent);
-        }
-
-        public IHttpActionResult Delete(int id)
-        {
-
-            if (id == 0)
-            {
-                return StatusCode(System.Net.HttpStatusCode.Conflict);
-
-                //var response = new HttpResponseMessage
-                //{
-                //    StatusCode = System.Net.HttpStatusCode.Conflict
-                //};
-
-                //return response;
-            }
-
-            _ProductsService.Remove(id);
-
-            return Ok();
-        }
+     
 
         public void Head()
         {

@@ -124,6 +124,21 @@ namespace Intel.DonutMaster.MockServices
             _Products.Add(product);
         }
 
+        public Task AddAsync(Product item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Product> Get()
         {
             var products = _Products.Select(p => new Product
@@ -152,6 +167,11 @@ namespace Intel.DonutMaster.MockServices
         public Task<IList<Product>> GetAsync()
         {
             return Task.Run(() => Get());
+        }
+
+        public Task<Product> GetAsync(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public Recipe GetByProduct(int productId)
@@ -187,6 +207,11 @@ namespace Intel.DonutMaster.MockServices
 
             Add(product);
 
+        }
+
+        public Task UpdateAsync(Product item)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -16,6 +16,21 @@ namespace Intel.DonutMaster.RestApiServices
             throw new NotImplementedException();
         }
 
+        public Task AddAsync(Product item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Product> Get()
         {
             throw new NotImplementedException();
@@ -46,6 +61,11 @@ namespace Intel.DonutMaster.RestApiServices
             }
         }
 
+        public Task<Product> GetAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Recipe GetByProduct(int productId)
         {
             throw new NotImplementedException();
@@ -62,6 +82,11 @@ namespace Intel.DonutMaster.RestApiServices
         }
 
         public void Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(Product item)
         {
             throw new NotImplementedException();
         }

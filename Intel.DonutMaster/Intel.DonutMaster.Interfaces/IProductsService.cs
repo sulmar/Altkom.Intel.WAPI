@@ -1,4 +1,5 @@
-﻿using Intel.DonutMaster.Models;
+﻿using Intel.DonutMaster.Interfaces;
+using Intel.DonutMaster.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,23 +8,9 @@ using System.Threading.Tasks;
 
 namespace Intel.DonutMaster.Interfaces
 {
-    public interface IProductsService
+    public interface IProductsService : IBaseService<Product, int>
     {
-        IList<Product> Get();
-
-        Product Get(int id);
-
         Product Get(string symbol);
-
-        void Add(Product product);
-
-        void Update(Product product);
-
-        void Remove(int id);
-
-
-        Task<IList<Product>> GetAsync();
-
 
         Recipe GetByProduct(int productId);
 

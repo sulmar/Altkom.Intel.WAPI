@@ -8,7 +8,18 @@ namespace Intel.DonutMaster.Models
 {
     public class Product : Base
     {
-        public int ProductId { get; set; }
+        public int ProductId
+        {
+            get
+            {
+                return Id;
+            }
+
+            set
+            {
+                Id = value;
+            }
+        }
 
         public string Name { get; set; }
 
